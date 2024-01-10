@@ -20,9 +20,9 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = License.CC_BY_NC_SA_3_0()
+LICENSE: License = License.CC_BY_NC_SA_3_0(source_url="https://synthia-dataset.net/terms-of-use/")
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive()]
-CATEGORY: Category = Category.SelfDriving()
+CATEGORY: Category = Category.SelfDriving(benchmark=True)
 
 CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
 ANNOTATION_TYPES: List[AnnotationType] = [
@@ -89,9 +89,7 @@ AUTHORS_CONTACTS: Optional[List[str]] = [
 ]
 
 
-ORGANIZATION_NAME: Optional[
-    Union[str, List[str]]
-] = "Computer Vision Center, Univ. Autonoma of Barcelona"
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Computer Vision Center, Barcelona"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.cvc.uab.es/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
